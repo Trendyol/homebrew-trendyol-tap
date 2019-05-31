@@ -9,9 +9,18 @@ class EasyRollback < Formula
   depends_on "go" => :build
 
   def install
-       system "gobuild.sh"
-       bin.install ".gobuild/bin/easy-rollback" => "easy-rollback"
-     end
+    ENV["GOPATH"] = buildpath
+
+    bin_path = buildpath/"src/github.com/Trendyol/easy-rollback"
+    # Copy all files from their current location (GOPATH root)
+    # to $GOPATH/src/github.com/kevinburke/hostsfile
+    bin_path.install Dir["*"]
+    cd bin_path do
+      # Install the compiled binary into Homebrew's `bin` - a pre-existing
+      # global variable
+      system "go", "build", "-o", bin/"easy-rollback", "."
+    end
+  end
 
      test do
        system "#{bin}/easy-rollback", "--help"
