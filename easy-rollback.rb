@@ -4,8 +4,8 @@
 class EasyRollback < Formula
   desc ":recycle: Now you can easily rollback to previous deployed images whatever you want on k8s environment"
   homepage ""
-  url "https://github.com/Trendyol/easy-rollback/archive/v1.0.6.tar.gz"
-  sha256 "84895e3ca020f72cdf482cdb4cd1670abdf9d70d7ace1d9770fbd88ba6d72c72"
+  url "https://github.com/Trendyol/easy-rollback/archive/v1.0.7.tar.gz"
+  sha256 "80f74e81363f09a4f26d488de2711181644ebe61dcf0fff8c8fe7160e82825de"
   depends_on "go" => :build
 
   def install
