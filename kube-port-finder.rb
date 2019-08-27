@@ -4,8 +4,8 @@
 class KubePortFinder < Formula
   desc "kube-pf is a command line tool that find available ports on kubernetes"
   homepage ""
-  url "https://github.com/Trendyol/kube-port-finder/archive/v0.0.1.tar.gz"
-  sha256 "02836e254299dcd7c974229cff1c668439195961d8cbc6ea6255ee567a3133f9"
+  url "https://github.com/Trendyol/kube-port-finder/archive/v0.0.2.tar.gz"
+  sha256 "42ec30ede8989588bb8af2af4adda753d6505e192de0940bee8d60a97401546c"
   depends_on "go" => :build
   def install
       ENV["GOPATH"] = buildpath
