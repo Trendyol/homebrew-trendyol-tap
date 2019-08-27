@@ -25,4 +25,3 @@ class KubePortFinder < Formula
   system "#{bin}/kube-pf", "--help"
 end
 end
-end
