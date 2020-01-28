@@ -6,7 +6,7 @@ require "language/go"
 class DockerShell < Formula
   desc "A simple interactive prompt for docker"
   homepage "https://github.com/Trendyol/docker-shell"
-  url "https://github.com/Trendyol/docker-shell/archive/v1.0.0.tar.gz"
+  url "https://github.com/Trendyol/docker-shell/archive/v1.1.0.tar.gz"
   sha256 "8ab0f94f587d7ffad05d2f6bdb64d670e72a1cf41369221db29b5c3cd7dbe4ef"
   head "https://github.com/Trendyol/docker-shell"
 
