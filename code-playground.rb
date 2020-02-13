@@ -3,9 +3,9 @@
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
 class CodePlayground < Formula
   desc "CodePlayground is a playground tool for go and rust language."
-  homepage ""
-  url "https://github.com/Trendyol/code-playground/archive/v1.0.1.tar.gz"
-  sha256 "b1044489f9f9b8608956a0a4f19f1fc2fc47ad95c983a3d36832c9816663c8ec"
+  homepage "https://github.com/Trendyol/code-playground/"
+  url "https://github.com/Trendyol/code-playground/archive/v1.0.2.tar.gz"
+  sha256 "2b7d7f900bfdd9f1ac1f0ed9904a8b34da23d56481cee79420a2bf8cd1ef3a35"
 
   depends_on "go" => :build
 
@@ -21,6 +21,6 @@ class CodePlayground < Formula
   end
 
   test do
-    system "true"
+    system "#{bin}/code-playground", "--help"
   end
 end
