@@ -2,10 +2,10 @@
 #                https://rubydoc.brew.sh/Formula
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
 class CodePlayground < Formula
-  desc "CodePlayground is a playground tool for go and rust language"
-  homepage "https://github.com/Trendyol/code-playground/"
-  url "https://github.com/Trendyol/code-playground/archive/v1.0.0.tar.gz"
-  sha256 "2ccd7992b817fd44f2abe3bc44af04af7b77f1314d756ca3e5866b1acf34b3c4"
+  desc "CodePlayground is a playground tool for go and rust language."
+  homepage ""
+  url "https://github.com/Trendyol/code-playground/archive/v1.0.1.tar.gz"
+  sha256 "b1044489f9f9b8608956a0a4f19f1fc2fc47ad95c983a3d36832c9816663c8ec"
 
   depends_on "go" => :build
 
