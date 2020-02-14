@@ -4,8 +4,8 @@
 class CodePlayground < Formula
   desc "CodePlayground is a playground tool for go and rust language."
   homepage "https://github.com/Trendyol/code-playground/"
-  url "https://github.com/Trendyol/code-playground/archive/v1.2.0.tar.gz"
-  sha256 "1f3592d87211b80b233e880264a97dc3cad49eeedd655bb90fe04a165b9e2095"
+  url "https://github.com/Trendyol/code-playground/archive/v1.2.1.tar.gz"
+  sha256 "85fcf4206b733e2e9734b3c9c7b713bdbd3b31eeaf47257e29b43774cf57b839"
 
   depends_on "go" => :build
 
