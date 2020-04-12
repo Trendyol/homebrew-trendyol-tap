@@ -7,8 +7,13 @@ class Verg < Formula
   url "https://github.com/Trendyol/verg/archive/v0.3.0.tar.gz"
   sha256 "f93082f9692b25423754bfb5cc95b0a0371814aa3c339afe968f0c593caab5bd"
 
-  def install
-    system "cp", "./verg", bin/"verg"
+  def install    
+    bin_path = "github.com/Trendyol/code-playground"
+    bin_path.install Dir["*"]
+
+    cd bin_path do
+      system "cp", "./verg", bin/"verg"
+    end
   end
 
   test do
