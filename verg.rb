@@ -13,7 +13,7 @@ class Verg < Formula
     bin_path.install Dir["*"]
 
     cd bin_path do
-      system "cp", "-R", "./verg", bin/"verg"
+      system "mv", "./verg", bin/"verg"
     end
   end
   
