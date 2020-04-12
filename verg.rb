@@ -12,10 +12,7 @@ class Verg < Formula
     bin_path = buildpath/"src/github.com/Trendyol/verg"
     bin_path.install Dir["*"]
 
-    cd bin_path do
-      system
-    end
-
+    cd bin_path 
   end
   
   test do
