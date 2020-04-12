@@ -6,7 +6,16 @@ class Verg < Formula
   homepage "https://github.com/Trendyol/verg/"
   url "https://github.com/Trendyol/verg/archive/v0.3.0.tar.gz"
   sha256 "f93082f9692b25423754bfb5cc95b0a0371814aa3c339afe968f0c593caab5bd"
+  
+  def install
+    
+    bin_path = buildpath/"src/github.com/Trendyol/code-playground"
 
+    cd bin_path do
+      system "cp", "-R", "./verg", bin/"verg"
+    end
+  end
+  
   test do
     system "verg", "--help"
   end
