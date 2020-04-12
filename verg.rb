@@ -8,11 +8,7 @@ class Verg < Formula
   sha256 "f93082f9692b25423754bfb5cc95b0a0371814aa3c339afe968f0c593caab5bd"
 
   def install    
-    bin_path = "github.com/Trendyol/verg"
 
-    cd bin_path do
-      system "cp", "./verg", bin/"verg"
-    end
   end
 
   test do
