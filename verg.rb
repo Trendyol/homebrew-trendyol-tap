@@ -9,7 +9,8 @@ class Verg < Formula
   
   def install
     
-    bin_path = buildpath/"src/github.com/Trendyol/code-playground"
+    bin_path = buildpath/"src/github.com/Trendyol/verg"
+    bin_path.install Dir["*"]
 
     cd bin_path do
       system "cp", "-R", "./verg", bin/"verg"
