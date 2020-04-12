@@ -8,9 +8,7 @@ class Verg < Formula
   sha256 "f93082f9692b25423754bfb5cc95b0a0371814aa3c339afe968f0c593caab5bd"
 
   def install
-    system "pwd"
-    system "ls"
-    system "make", "install"
+    system "cp", "./verg", bin/"verg"
   end
 
   test do
