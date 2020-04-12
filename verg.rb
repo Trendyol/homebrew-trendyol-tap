@@ -8,11 +8,9 @@ class Verg < Formula
   sha256 "f93082f9692b25423754bfb5cc95b0a0371814aa3c339afe968f0c593caab5bd"
 
   def install
-    bin_path.install Dir["*"]
-
-    cd bin_path do
-      system "make", "install"
-    end
+    system "pwd"
+    system "ls"
+    system "make", "install"
   end
 
   test do
