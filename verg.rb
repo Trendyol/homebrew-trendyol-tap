@@ -12,7 +12,9 @@ class Verg < Formula
     bin_path = buildpath/"src/github.com/Trendyol/verg"
     bin_path.install Dir["*"]
 
-    cd bin_path 
+   cd bin_path do
+     system "mv", "./verg", bin/"verg"
+   end
   end
   
   test do
