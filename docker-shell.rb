@@ -7,7 +7,7 @@ class DockerShell < Formula
   desc "A simple interactive prompt for docker"
   homepage "https://github.com/Trendyol/docker-shell"
   url "https://github.com/Trendyol/docker-shell/archive/v1.3.1.tar.gz"
-  sha256 "a21a027c09da823e19e1a3b22d6356df4483b993217e5f5aa40110601ece8f07"
+  sha256 "636340e2e23e31389e54925fcaaadde15a4789ffdc661d61b94b9c49f5c0f046"
   head "https://github.com/Trendyol/docker-shell"
 
   depends_on "go" => :build
