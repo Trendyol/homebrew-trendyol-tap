@@ -9,13 +9,10 @@ class Gaos < Formula
   url "https://github.com/Trendyol/gaos/releases/download/v0.1.0/gaos_0.1.0_Darwin_x86_64.tar.gz"
   sha256 "9944a9bca12321dbeec5aadb392c286e4feb6ba07bc4b4dfccd19fd3d9aa4f19"
   license ""
+  
+  depends_on "go" => :build
 
   def install
-    
-    system "./configure", "--disable-debug",
-                      "--disable-dependency-tracking",
-                      "--disable-silent-rules",
-                      "--prefix=#{prefix}"
 
     bin_path = buildpath/"src/github.com/Trendyol/gaos"
     bin_path.install Dir["*"]
