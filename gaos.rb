@@ -11,6 +11,11 @@ class Gaos < Formula
   license ""
 
   def install
+    
+    system "./configure", "--disable-debug",
+                      "--disable-dependency-tracking",
+                      "--disable-silent-rules",
+                      "--prefix=#{prefix}"
 
     bin_path = buildpath/"src/github.com/Trendyol/gaos"
     bin_path.install Dir["*"]
