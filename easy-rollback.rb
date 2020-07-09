@@ -4,27 +4,18 @@
 class EasyRollback < Formula
   desc ":recycle: Now you can easily rollback to previous deployed images whatever you want on k8s environment"
   homepage ""
-  url "https://github.com/Trendyol/easy-rollback/archive/v1.0.16.tar.gz"
-  sha256 "18b56225565431299b93a8770ddbcfd28b9ad28254145ac4ae74fd0e26b736f1"
+  url "https://github.com/Trendyol/easy-rollback/releases/download/v1.0.16/easy-rollback_1.0.16_Darwin_x86_64.tar.gz"
+  sha256 "2af6307b741d90b2dc16d49fdb7f3e5673089ccad6e9cd9576a4bc2b34a7fea0"
   license ""
 
-  depends_on "go" => :build
+  # depends_on "cmake" => :build
 
-    def install
-      ENV["GOPATH"] = buildpath
+  def install
+     bin.install "easy-rollback"
+  end
 
-      bin_path = buildpath/"src/github.com/Trendyol/easy-rollback"
-      # Copy all files from their current location (GOPATH root)
-      # to $GOPATH/src/github.com/kevinburke/hostsfile
-      bin_path.install Dir["*"]
-      cd bin_path do
-        # Install the compiled binary into Homebrew's `bin` - a pre-existing
-        # global variable
-        system "go", "build", "-o", bin/"easy-rollback", "."
-      end
-    end
 
-    test do
-          system "#{bin}/easy-rollback", "--help"
-        end
-   end
+  test do
+    system "#{bin}/easy-rollback", "version"
+  end
+end
