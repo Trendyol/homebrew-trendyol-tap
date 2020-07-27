@@ -4,17 +4,11 @@
 class Verg < Formula
   desc "verG is a semantic versioning CLI"
   homepage "https://github.com/Trendyol/verg/"
-  url "https://github.com/Trendyol/verg/archive/v0.3.0.tar.gz"
-  sha256 "f93082f9692b25423754bfb5cc95b0a0371814aa3c339afe968f0c593caab5bd"
-  
-  def install
-    
-    bin_path = buildpath/"src/github.com/Trendyol/verg"
-    bin_path.install Dir["*"]
+  url "https://github.com/Trendyol/verg/releases/download/v0.5.0/verg_0.5.0_Darwin_x86_64.tar.gz"
+  sha256 "5782ce43e66175786aef9c5903a8a57bb105db98d5b5a722331560fc4c9f4b70"
 
-   cd bin_path do
-     system "mv", "./verg", bin/"verg"
-   end
+  def install
+    bin.install "code-playground"
   end
   
   test do
