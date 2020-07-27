@@ -4,20 +4,11 @@
 class CodePlayground < Formula
   desc "CodePlayground is a playground tool for go and rust language."
   homepage "https://github.com/Trendyol/code-playground/"
-  url "https://github.com/Trendyol/code-playground/archive/v1.2.1.tar.gz"
-  sha256 "85fcf4206b733e2e9734b3c9c7b713bdbd3b31eeaf47257e29b43774cf57b839"
-
-  depends_on "go" => :build
+  url "https://github.com/Trendyol/code-playground/releases/download/v1.3.1/code-playground_1.3.1_Darwin_x86_64.tar.gz"
+  sha256 "768995f8a9633b15d332a5edb50c308e0edb086f699b925d06315eb9c0800c52"
 
   def install
-
-    ENV["GOPATH"] = buildpath
-    bin_path = buildpath/"src/github.com/Trendyol/code-playground"
-    bin_path.install Dir["*"]
-
-    cd bin_path do
-      system "go", "build", "-o", bin/"code-playground", "."
-    end
+    bin.install "code-playground"
   end
 
   test do
