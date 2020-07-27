@@ -8,7 +8,7 @@ class Verg < Formula
   sha256 "5782ce43e66175786aef9c5903a8a57bb105db98d5b5a722331560fc4c9f4b70"
 
   def install
-    bin.install "code-playground"
+    bin.install "verg"
   end
   
   test do
