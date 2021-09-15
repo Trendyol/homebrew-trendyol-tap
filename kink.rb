@@ -12,14 +12,14 @@ class Kink < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/Trendyol/kink/releases/download/v0.1.0/kink_0.1.0_Darwin-x86_64.tar.gz"
-      sha256 "00852e3640031be61b77f1a207e586250f00d77f505581a9c76d5fe4c0313679"
+      sha256 "e191a64b59008988181c875e504f1cc76de4b959d74c8dca9e4c22c383e161cd"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/Trendyol/kink/releases/download/v0.1.0/kink_0.1.0_Linux-x86_64.tar.gz"
-      sha256 "6dd0b694e6a7f2c3ac610609bdaba00ec96cd57c2139d111b341a060dfc8d178"
+      sha256 "3136d6ed4d54802cce2641db905f11483da8fd1362d9109462bbead021644a67"
     end
   end
 
@@ -28,6 +28,9 @@ class Kink < Formula
 
   def install
     bin.install "kink"
+    bash_completion.install "completions/kink.bash" => "kink"
+    zsh_completion.install "completions/kink.zsh" => "_kink"
+    fish_completion.install "completions/kink.fish"
   end
 
   test do
