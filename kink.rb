@@ -5,21 +5,21 @@
 class Kink < Formula
   desc "KinK is a helper CLI that facilitates to manage KinD clusters as Kubernetes pods. Designed to ease clusters up for fast testing with batteries included in mind."
   homepage "https://github.com/trendyol"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Trendyol/kink/releases/download/v0.1.0/kink_0.1.0_Darwin-x86_64.tar.gz"
-      sha256 "e191a64b59008988181c875e504f1cc76de4b959d74c8dca9e4c22c383e161cd"
+      url "https://github.com/Trendyol/kink/releases/download/v0.1.1/kink_0.1.1_Darwin-x86_64.tar.gz"
+      sha256 "5ca5bd0f6e25d29277c65f61be015c399fe75490f27473b7b6941697802d4097"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/Trendyol/kink/releases/download/v0.1.0/kink_0.1.0_Linux-x86_64.tar.gz"
-      sha256 "3136d6ed4d54802cce2641db905f11483da8fd1362d9109462bbead021644a67"
+      url "https://github.com/Trendyol/kink/releases/download/v0.1.1/kink_0.1.1_Linux-x86_64.tar.gz"
+      sha256 "954ff7b257bf40339906b8054f41de1d2b9bf9fb47e44d40f25e632f2eb04484"
     end
   end
 
