@@ -4,13 +4,15 @@
 # Install:
 #   brew install Trendyol/trendyol-tap/stove-next
 #
-# Binaries come from the rolling `next` prerelease, published alongside every
-# Maven snapshot. Note: the formula cannot be named `stove@next` — Homebrew
-# only maps `@` to a loadable class name when a digit follows it.
+# Binaries come from the rolling `next` prerelease on this tap repo (kept
+# here so the main repo's release list stays purely `v*`), published
+# alongside every Maven snapshot. Note: the formula cannot be named
+# `stove@next` — Homebrew only maps `@` to a loadable class name when a
+# digit follows it.
 class StoveNext < Formula
   desc "Local observability dashboard for Stove e2e test runs (dev channel)"
   homepage "https://github.com/Trendyol/stove"
-  version "1.0.0.543-SNAPSHOT"
+  version "1.0.0.544-SNAPSHOT"
   license "Apache-2.0"
 
   livecheck do
@@ -21,19 +23,19 @@ class StoveNext < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/Trendyol/stove/releases/download/next/stove-#{version}-darwin-arm64.tar.gz"
-      sha256 "e2e2a69fbda114df5f7da705c3d0ca94f9c0ef9d0ce9f178d8f77073be568dc0"
+      url "https://github.com/Trendyol/homebrew-trendyol-tap/releases/download/next/stove-#{version}-darwin-arm64.tar.gz"
+      sha256 "e66d516f38dad2e68e0e8395e9ffa00e5a6d1190004ad44296f505fa6de98ac4"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Trendyol/stove/releases/download/next/stove-#{version}-darwin-amd64.tar.gz"
-      sha256 "45cc8347fa5c46fc5e8be4a8ddfc296376edf80c36f2a5cb570352986e1dcca6"
+      url "https://github.com/Trendyol/homebrew-trendyol-tap/releases/download/next/stove-#{version}-darwin-amd64.tar.gz"
+      sha256 "b254b83b9036041a9020e8a343216b9435f58852399a4d2e19d0c7dfede44ca5"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/Trendyol/stove/releases/download/next/stove-#{version}-linux-amd64.tar.gz"
-      sha256 "2babba3a0135687bd19dbe4208a1bd33f92c6df1b4e4d91bf5e42749cf8a2297"
+      url "https://github.com/Trendyol/homebrew-trendyol-tap/releases/download/next/stove-#{version}-linux-amd64.tar.gz"
+      sha256 "9deb40672fc83544a95106ce65ece2d198f6dd7cadc38eb33f5bd68db9295288"
     end
   end
 
