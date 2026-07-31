@@ -12,7 +12,7 @@
 class StoveNext < Formula
   desc "Local observability dashboard for Stove e2e test runs (dev channel)"
   homepage "https://github.com/Trendyol/stove"
-  version "1.0.0.546-SNAPSHOT"
+  version "1.0.0.547-SNAPSHOT"
   license "Apache-2.0"
 
   livecheck do
@@ -24,18 +24,18 @@ class StoveNext < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/Trendyol/homebrew-trendyol-tap/releases/download/next/stove-#{version}-darwin-arm64.tar.gz"
-      sha256 "972f0a539ec8a355e7fe03e9f0906171803ad9d1934125303f51474a1f5b28a5"
+      sha256 "fe5318e43d7cbf3151f14c7a9fb736174fe0a3f8217f0b32eba863d767c6596e"
     end
     if Hardware::CPU.intel?
       url "https://github.com/Trendyol/homebrew-trendyol-tap/releases/download/next/stove-#{version}-darwin-amd64.tar.gz"
-      sha256 "551ea1be5992f1c26558156f48c4a40d6606d77142fc67108235b58ea30faf25"
+      sha256 "e3fb350b389414072930ad01f917017ca0680c15683828a1c3fcf63191ad0545"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/Trendyol/homebrew-trendyol-tap/releases/download/next/stove-#{version}-linux-amd64.tar.gz"
-      sha256 "4dad473953c00c06ed33921ef5fbb18c7fa814af839746697419ef757b1eea95"
+      sha256 "bf4f5518a24d12993fcdac4f3caab4165c21dbcee7e944f9a3e2bce106067c42"
     end
   end
 
