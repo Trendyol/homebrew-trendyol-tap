@@ -6,7 +6,7 @@
 class Stove < Formula
   desc "Local observability dashboard for Stove e2e test runs"
   homepage "https://github.com/Trendyol/stove"
-  version "0.27.4"
+  version "0.27.5"
   license "Apache-2.0"
 
   conflicts_with "stove-next", because: "both install a `stove` binary"
@@ -14,18 +14,18 @@ class Stove < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/Trendyol/stove/releases/download/v#{version}/stove-#{version}-darwin-arm64.tar.gz"
-      sha256 "4dba1f01e28d4aba178c3c227c2e28e684673c5b504745141e28279556e9670b"
+      sha256 "a914a8100fa05f6f618596b8320c3fa4deb81135f100771834023a191908bacf"
     end
     if Hardware::CPU.intel?
       url "https://github.com/Trendyol/stove/releases/download/v#{version}/stove-#{version}-darwin-amd64.tar.gz"
-      sha256 "b2c5f80eb1bb28cd26e05f4e3e9928d870c029c210925fe3d4116322382a4e4a"
+      sha256 "3ca4d896922f38d996f011cb3b9f57be6c22bf94988f6649ddda6600476f9772"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/Trendyol/stove/releases/download/v#{version}/stove-#{version}-linux-amd64.tar.gz"
-      sha256 "5b4afa3080f3493f8ea50fd5e1425b6128873c9d1e98a97eb910872b6d77fc9f"
+      sha256 "aba799cc1c54ce000feaff17a664650d88afa88bffc9e36bd449b42d48df20c2"
     end
   end
 
